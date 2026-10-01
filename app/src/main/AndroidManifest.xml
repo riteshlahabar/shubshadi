@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shubh.shaadi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> <!-- App hardware permission -->
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name="com.shubh.shaadi.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.shubh.shaadi.activities.RegisterPhotoUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shubh.shaadi.activities.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shubh.shaadi.activities.BlockListActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.shubh.shaadi.activities.ViewedContactActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.RecentlyLoginActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.RecentlyJoinActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.NotificationListActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.AddReviewActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.ReviewListActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.SendInquiryActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.VendorDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.VendorListActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.FirstVendorCategoryListActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.MatchFromAdminActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.ChatConversationActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.ChatActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.AddSuccessStoryActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.SuccessStoryActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.WelcomeActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shubh.shaadi.activities.IntroActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.mkr.matrimony.active_act" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shubh.shaadi.activities.LoginActivity"
+            android:parentActivityName="com.shubh.shaadi.activities.IntroActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shubh.shaadi.activities.IntroActivity" />
+        </activity>
+        <activity
+            android:name="com.shubh.shaadi.activities.RegisterFirstActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.shubh.shaadi.activities.DashboardActivity"
+            android:exported="true"
+            android:label="@string/title_activity_deshboard"
+            android:launchMode="singleTask"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.DashboardTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="megamatrimony.trialme.in"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shubh.shaadi.activities.ForgotPasswordActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.ViewMyProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.EditProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.ManagePhotosActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.ChangePasswordActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.SearchActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.DeleteProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.ContactUsActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.AllCmsActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.ReportMissuseActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.LikeProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.ShortlistedProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.MessagesActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.ConversationActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.shubh.shaadi.activities.QuickMessageActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.mkr.matrimony.message" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shubh.shaadi.activities.QuickMessageActivity" />
+        </activity>
+        <activity
+            android:name="com.shubh.shaadi.activities.ManageAccountActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.SavedSearchActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.ExpressInterestActivity"
+            android:exported="true"
+            android:parentActivityName="com.shubh.shaadi.activities.DashboardActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.mkr.matrimony.interest_receive" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shubh.shaadi.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="com.shubh.shaadi.activities.ViewedProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.CurrentPlanActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.PlanListActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.SearchResultActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.OtherUserProfileActivity"
+            android:exported="true"
+            android:parentActivityName="com.shubh.shaadi.activities.DashboardActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.mkr.matrimony.other" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shubh.shaadi.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="com.shubh.shaadi.activities.MakePaymentsActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.SuccessActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.PhotoPasswordActivity"
+            android:exported="true"
+            android:parentActivityName="com.shubh.shaadi.activities.DashboardActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.mkr.matrimony.photo_password" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shubh.shaadi.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="com.shubh.shaadi.activities.UploadVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.UploadIdAndHoroscopeActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.CustomMatchActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.LoginWithOtpActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.LoginWithOtpActivityWithFirebase"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.EditPreferenceActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.GallaryNewActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.PaymentWebView"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.shubh.shaadi.activities.QuickMessageActivity"
+            android:parentActivityName="com.shubh.shaadi.activities.DashboardActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shubh.shaadi.activities.DashboardActivity" />
+        </activity> <!-- File provider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- End File provider -->
+        <!-- fcm -->
+        <service
+            android:name="com.shubh.shaadi.fcm.MyFirebaseMessagingService"
+            android:exported="false"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="General" />
+
+        <receiver
+            android:name="com.shubh.shaadi.broadcastreciever.MySMSBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
